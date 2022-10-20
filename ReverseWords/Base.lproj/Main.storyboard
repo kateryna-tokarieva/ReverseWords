@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReverseWords" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6z-KN-ECS">
+                                <rect key="frame" x="80" y="152" width="230" height="40"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Reverse Words">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="34" name="Roboto-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application will reverse your words. Please type text below " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX1-QT-Zb5">
+                                <rect key="frame" x="41" y="209" width="308" height="40"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkD-32-vcv">
+                                <rect key="frame" x="24" y="719" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="mtE-ta-hVa"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Reverse">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name="Roboto-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reverseButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HGr-Ve-o43"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to reverse" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M7j-Be-X4q">
+                                <rect key="frame" x="16" y="293" width="358" height="34"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfQ-Cc-4Vq">
+                                <rect key="frame" x="16" y="377" width="358" height="28"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2C-rz-2e9">
+                                <rect key="frame" x="16" y="352" width="358" height="1"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="bWX-UE-43k"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bX1-QT-Zb5" firstAttribute="top" secondItem="F6z-KN-ECS" secondAttribute="bottom" constant="17" id="7G0-Yg-TOk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F6z-KN-ECS" secondAttribute="trailing" constant="80" id="7PW-KU-Z1d"/>
+                            <constraint firstItem="w2C-rz-2e9" firstAttribute="top" secondItem="M7j-Be-X4q" secondAttribute="bottom" constant="25" id="MTY-xZ-xkn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nfQ-Cc-4Vq" secondAttribute="trailing" constant="16" id="O7j-hr-bWd"/>
+                            <constraint firstItem="nfQ-Cc-4Vq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OKZ-CF-4d8"/>
+                            <constraint firstItem="w2C-rz-2e9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Pni-54-gmz"/>
+                            <constraint firstItem="M7j-Be-X4q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Y1z-2i-SQC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LkD-32-vcv" secondAttribute="trailing" constant="23" id="bYF-SW-DQC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LkD-32-vcv" secondAttribute="bottom" constant="31" id="cVw-u2-Lp3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M7j-Be-X4q" secondAttribute="trailing" constant="16" id="kPq-JA-zJM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bX1-QT-Zb5" secondAttribute="trailing" constant="41" id="l3K-sS-tlB"/>
+                            <constraint firstItem="F6z-KN-ECS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="105" id="pac-5r-LSM"/>
+                            <constraint firstItem="LkD-32-vcv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="qv6-Wu-Cir"/>
+                            <constraint firstItem="w2C-rz-2e9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="sK9-Zj-AZV"/>
+                            <constraint firstItem="F6z-KN-ECS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="t5B-GQ-Tjp"/>
+                            <constraint firstItem="nfQ-Cc-4Vq" firstAttribute="top" secondItem="M7j-Be-X4q" secondAttribute="bottom" constant="50" id="tbW-cE-V9J"/>
+                            <constraint firstItem="M7j-Be-X4q" firstAttribute="top" secondItem="bX1-QT-Zb5" secondAttribute="bottom" constant="44" id="ugd-UX-iuW"/>
+                            <constraint firstItem="bX1-QT-Zb5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="xK7-iH-7Lx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appTitleLabel" destination="F6z-KN-ECS" id="ySr-CK-vfa"/>
+                        <outlet property="descriptionLabel" destination="bX1-QT-Zb5" id="rab-b9-36b"/>
+                        <outlet property="resultLabel" destination="nfQ-Cc-4Vq" id="Tqq-bj-KhL"/>
+                        <outlet property="reverseButton" destination="LkD-32-vcv" id="Sib-yx-f8O"/>
+                        <outlet property="textField" destination="M7j-Be-X4q" id="WNm-gT-qS6"/>
+                        <outlet property="textFieldLine" destination="w2C-rz-2e9" id="KJF-mc-qQ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.53846153846153" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
